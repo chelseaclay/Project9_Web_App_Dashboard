@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Chelsea Clay | Web App Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/application.css">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet"> 
+</head>
+<body>
+  <header>
+    <ul>
+      <li class="logo">YourApp&trade;</li>
+      <li><img src="img/icon-bell.svg" alt="Notifications" class="icon" /></li>
+      <li><img src="img/me.jpg" alt="Profile Photo" class="profile-photo" /></li>
+      <li class="name">Chelsea Clay</li>
+    </ul>
+  </header>
+    
+  <div class="container">
+  
+    <nav>
+      <ul>
+        <li><img src="img/icon-dashboard.svg" alt="Dashboard"  class="icon"/></li>
+        <li><img src="img/icon-members.svg" alt="Members"  class="icon"/></li>
+        <li><img src="img/icon-visits.svg" alt="Visits"  class="icon"/></li>
+        <li><img src="img/icon-settings.svg" alt="Settings"  class="icon"/></li>
+      </ul>
+    </nav>
+    
+    <div class="dash">
+      <h1>Dashboard</h1>
+      <div class="searchbar">
+        <input type="text" id="search" name="searchbar" placeholder="Search">
+      </div>
+    </div>
+    
+    <div class="traffic">
+      <h2>traffic</h2>
+      <ul class="traffic-charts">
+        <li><button id="hourlyTraffic">Hourly</button></li>
+        <li><button id="dailyTraffic">Daily</button></li>
+        <li><button id="weeklyTraffic">Weekly</button></li>
+        <li><button id="monthlyTraffic">Monthly</button></li>
+      </ul>
+      <canvas id="trafficChart" width="300" height="250"></canvas>
+    </div>
+    
+    <div class="daily-traffic">
+      <h2>daily traffic</h2>
+      <canvas id="dailyTrafficChart" width="300" height="250"></canvas>
+    </div>
+    
+    <div class="mobile-user">
+      <h2>mobile user</h2>
+      <canvas id="mobileUserChart" width="300" height="300"></canvas>
+    </div>
+    
+    <div class="social-stats">
+      <h2>social stats</h2>
+      <div class="twitter">
+        <img src="img/icon-twitter.svg" alt="Twitter" class="social-icon" />
+        <div class="social-info">
+          <p class="social-name">Twitter</p>
+          <p class="social-num">10,375</p>
+        </div>
+      </div>
+      <div class="facebook">
+        <img src="img/icon-facebook.svg" alt="Facebook" class="social-icon" />
+        <div class="social-info">
+          <p class="social-name">Facebook</p>
+          <p class="social-num">8,739</p>
+        </div>
+      </div>
+      <div class="instagram">
+        <img src="img/icon-instagram.svg" alt="Instagram" class="social-icon" />
+        <div class="social-info">
+          <p class="social-name">Instagram</p>
+          <p class="social-num">7,583</p>
+        </div>
+      </div>
+      <div class="google">
+        <img src="img/icon-google-plus.svg" alt="Google+" class="social-icon" />
+        <div class="social-info">
+          <p class="social-name">Google+</p>
+          <p class="social-num">6,246</p>
+        </div>
+      </div>
+      <div class="linkedin">
+        <img src="img/icon-linkedin.svg" alt="Linkedin" class="social-icon" />
+        <div class="social-info">
+          <p class="social-name">Linkedin</p>
+          <p class="social-num">6,981</p>
+        </div>
+      </div>
+      <div class="behance">
+        <img src="img/icon-behance.svg" alt="Behance" class="social-icon" />
+        <div class="social-info">
+          <p class="social-name">Behance</p>
+          <p class="social-num">9,487</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="new-members">
+      <h2>new members</h2>
+    </div>
+    
+    <div class="recent-activity">
+      <h2>recent activity</h2>
+    </div>
+    
+    <div class="message-user">
+      <h2>message user</h2>
+    </div>
+    
+    <div class="settings">
+      <h2>settings</h2>
+    </div>
+  
+  </div>  
+  
+  <script src="js/jquery-3.1.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js"></script>
+  <script src="js/styles.js"></script>
+
+</body>
+</html>

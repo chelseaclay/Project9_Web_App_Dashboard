@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+body {
+  font-family: "Catamaran", sans-serif;
+  font-size: 1em;
+  color: black;
+  font-weight: 400; }
+
+h1 {
+  font-size: 1.75em; }
+
+h2 {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 700; }
+
+.container {
+  padding: 1em; }
+
+ul {
+  list-style: none;
+  padding: 0; }
+
+.icon {
+  width: 1.75em; }
+
+nav {
+  background-color: #015f70;
+  order: 10;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0; }
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap; }
+    nav ul .icon {
+      width: 2em;
+      margin: 5px auto 0;
+      padding: 5px; }
+
+.dash {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap; }
+
+.traffic,
+.daily-traffic,
+.mobile-user,
+.social-stats,
+.new-members,
+.recent-activity,
+.message-user,
+.settings {
+  border-bottom: 1px solid #778899;
+  padding: 25px 0; }
+
+header {
+  background-color: #562d2f;
+  color: white; }
+  header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding: 0.5em 1em 0.15em; }
+    header ul .icon {
+      margin-right: 1em; }
+    header ul .logo {
+      flex-grow: 2; }
+
+.profile-photo {
+  border-radius: 50%;
+  width: 3em;
+  margin-right: 1em; }
+
+.traffic-charts {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row; }
+  .traffic-charts button {
+    margin-left: 0.5em;
+    padding: 0.25em 0.5em;
+    color: #015f70;
+    border: none;
+    background: none; }
+    .traffic-charts button:hover {
+      font-weight: 700; }
+
+.social-stats {
+  width: 100%; }
+  .social-stats h2 {
+    margin-bottom: 0.5em; }
+
+.twitter,
+.facebook,
+.instagram,
+.google,
+.linkedin,
+.behance {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgba(173, 128, 123, 0.2);
+  border: 1px solid #562d2f;
+  border-radius: 6%;
+  padding: 0.75em 0.5em;
+  margin: 0 auto 1em;
+  width: 100%; }
+
+.social-icon {
+  width: 80px;
+  margin-right: 1em; }
+
+.social-name {
+  font-family: "Catamaran", sans-serif;
+  font-size: 1em;
+  color: #562d2f;
+  font-weight: 700;
+  margin-bottom: -1.25em; }
+
+.social-num {
+  font-family: "Catamaran", sans-serif;
+  font-size: 2.75em;
+  color: black;
+  font-weight: 400; }
+
+/*# sourceMappingURL=application.css.map */

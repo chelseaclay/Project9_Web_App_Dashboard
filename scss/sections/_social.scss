@@ -1,0 +1,36 @@
+.social-stats {
+  width: 100%;
+  
+  h2 {
+    margin-bottom: 0.5em;
+  }
+}
+
+.twitter,
+.facebook,
+.instagram,
+.google,
+.linkedin,
+.behance {
+  @include flexbox(flex, center, center, wrap);
+  background-color: rgba(173,128,123,0.2);
+  border: 1px solid $purple;
+  border-radius: 6%;
+  padding: 0.75em 0.5em;
+  margin: 0 auto 1em;
+  width: 100%;
+}
+
+.social-icon {
+  width: 80px;
+  margin-right: 1em;
+}
+
+.social-name {
+  @include text($allFont, 1em, $purple, $boldFont);
+  margin-bottom: -1.25em;
+}
+
+.social-num {
+  @include text($allFont, 2.75em, black, $regFont);
+}

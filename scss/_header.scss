@@ -1,0 +1,25 @@
+header {
+  background-color: $purple;
+  color: white;
+  
+  ul {
+    @include flexbox(flex, space-between, center, nowrap);
+    flex-direction: row;
+    padding: 0.5em 1em 0.15em;
+    
+    .icon {
+      margin-right: 1em;
+    }
+    
+    .logo {
+      flex-grow: 2;
+    }
+  }
+}
+
+.profile-photo {
+  border-radius: 50%;
+  width: 3em;
+  margin-right: 1em;
+}
+
