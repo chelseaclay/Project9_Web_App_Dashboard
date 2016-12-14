@@ -1,0 +1,39 @@
+#profiles {
+  @include tablet {
+    @include flexbox(flex, space-between, center, wrap);
+    height: 440px;
+  }
+}
+
+#profiles .new-member-block:nth-child(4n) {
+  border: none;
+}
+
+.new-member-block {
+  border-bottom: 1px solid $rainwashed;
+  padding: 10px 0;
+  
+  @include tablet {
+    flex-basis: 100%;
+  }
+}
+
+.new-member-photo {
+  width: 75px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 1em;
+}
+
+.new-member-name {
+  font-size: 1.15em;
+}
+
+.new-member-email {
+  font-size: 0.75em;
+}
+
+.new-member-join {
+  font-size: 0.9em;
+  margin-bottom: 1em;
+}

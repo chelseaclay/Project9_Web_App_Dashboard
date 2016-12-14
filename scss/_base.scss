@@ -8,6 +8,11 @@ body {
   @include text($allFont, 1em, black, $regFont);
 }
 
+a {
+  @include text($allFont, 1em, $navy, $boldFont);
+  text-decoration: none;
+}
+
 h1 {
   font-size: 1.75em;
 }
@@ -20,6 +25,15 @@ h2 {
 
 .container {
   padding: 1em;
+  margin-top: 55px;
+  
+  @include tablet {
+    @include flexbox(flex, space-around, flex-start, wrap);
+  }
+  
+  @include desktop {
+    margin-left: 3em;
+  }
 }
 
 ul {
@@ -31,29 +45,15 @@ ul {
   width: 1.75em;
 }
 
-nav {
-  background-color: $navy;
-  order: 10;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  
-  ul {
-    @include flexbox(flex, space-around, center, nowrap);
-  
-    .icon {
-      width: 2em;
-      margin: 5px auto 0;
-      padding: 5px;
-    }
-  }
-}
-
 .dash {
-  flex-basis: 100%;
+  flex-basis: 100%;  
+  @include flexbox(flex, space-between, stretch, nowrap);
   
-  @include flexbox(flex, space-between, center, nowrap);
+  #search {
+    padding: 0.4em;
+    border: solid 0.5px $slate;
+    @include text($allFont, 0.8em, black, $regFont);
+  }
 }
 
 .traffic,
@@ -64,6 +64,79 @@ nav {
 .recent-activity,
 .message-user,
 .settings {
-  border-bottom: 1px solid #778899;
+  border-bottom: 1px solid $slate;
   padding: 25px 0;
+}
+
+.traffic,
+.daily-traffic,
+.mobile-user {
+  
+  @include tablet {
+    width: 50%;
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+}
+
+.traffic {
+  @include tablet {
+    flex-basis: 100%;
+    border-bottom: none;
+  }
+}
+
+.daily-traffic {
+  
+  @include tablet {
+    border: 1px solid $slate;
+    border-left: none;
+  }
+}
+
+.mobile-user {
+  @include tablet {
+    margin-bottom: 1em;
+    border-top: 1px solid $slate;
+  }
+}
+
+.social-stats {
+  @include tablet {
+    border-bottom: none;
+  }
+}
+
+.new-members,
+.new-members,
+.recent-activity,
+.message-user,
+.settings {
+  @include tablet {
+    width: 50%;
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+}
+
+.new-members {
+  @include tablet {
+    border: 1px solid $slate;
+    border-left: none;
+  }
+}
+
+.recent-activity {
+  @include tablet {
+    border-top: 1px solid $slate;
+  }
+}
+
+.message-user {
+  margin-bottom: 25px;
+  
+  @include tablet {
+    border-right: 1px solid $slate;
+    border-bottom: none;
+  }
 }

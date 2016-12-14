@@ -8,9 +8,18 @@
     color: $navy;
     border: none;
     background: none;
+    cursor: pointer;
     
     &:hover {
-        font-weight: $boldFont;
-      }
+      text-decoration: underline;
+    }
+      
+    &:focus {
+      outline: none;  
+    }
+  }
+  
+  .selected {
+    font-weight: $boldFont;
   }
 }
