@@ -58,6 +58,10 @@ header {
   height: 100%;
   background: none;
   border: none;
+  
+  &:focus {
+    outline: none;
+  }
 }
 
 #notifyLight {

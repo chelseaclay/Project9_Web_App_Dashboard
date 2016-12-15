@@ -53,6 +53,13 @@ ul {
     padding: 0.4em;
     border: solid 0.5px $slate;
     @include text($allFont, 0.8em, black, $regFont);
+    transition: all 0.4s ease-in-out;
+    
+    &:focus {
+      outline: none;
+      border: 1px solid $aqua;
+      background-color: #ebf5f6;
+    }
   }
 }
 
@@ -71,8 +78,11 @@ ul {
 .traffic,
 .daily-traffic,
 .mobile-user {
-  
   max-width: 100%;
+  
+  .canvas-parent {
+    height: 15em;
+  }
   
   @include tablet {
     width: 50%;
@@ -82,7 +92,6 @@ ul {
 }
 
 .traffic {
-  max-height: 15%;
   
   @include tablet {
     flex-basis: 100%;
@@ -99,6 +108,7 @@ ul {
 }
 
 .mobile-user {
+  
   @include tablet {
     margin-bottom: 1em;
     border-top: 1px solid $slate;

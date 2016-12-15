@@ -390,7 +390,6 @@ function dailyChartBar() {
   };
   
   var ctx = document.getElementById("dailyTrafficChart").getContext("2d");
-  ctx.canvas.height = 200;
   var myLineChart = new Chart(ctx, {
     type: "bar",
     data: data,
