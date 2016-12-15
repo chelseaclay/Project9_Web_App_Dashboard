@@ -70,10 +70,10 @@ header {
 
 .notify-bar {
   padding: 0 1em;
-  background-color: #ebf5f6; //tint of $rainwashed
+  background-color: #ebf5f6; // tint of $rainwashed
   border-bottom: 1px solid $navy;
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 3.9em;
   right: 0;
   

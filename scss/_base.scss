@@ -72,6 +72,8 @@ ul {
 .daily-traffic,
 .mobile-user {
   
+  max-width: 100%;
+  
   @include tablet {
     width: 50%;
     padding-right: 1em;
@@ -80,6 +82,8 @@ ul {
 }
 
 .traffic {
+  max-height: 15%;
+  
   @include tablet {
     flex-basis: 100%;
     border-bottom: none;

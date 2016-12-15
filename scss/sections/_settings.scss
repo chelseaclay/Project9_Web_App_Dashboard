@@ -29,9 +29,13 @@ label {
   margin-bottom: 1.25em;
 }
 
-#settings-form label:nth-child(2n) {
-  @include desktop {
+.settings-switch {
+  include tablet {
     flex-basis: 40%;
+  }
+  
+  @include desktop {
+    flex-basis: 45%;
   }
 }
 
@@ -50,8 +54,12 @@ label {
   background-image: -o-linear-gradient(top, #eeeeee, white 25px);
   background-image: linear-gradient(to bottom, #eeeeee, white 25px);
   
+  @include tablet {
+    margin-right: 30%;
+  }
+  
   @include desktop {
-    margin-right: 10%;
+    margin-right: 20%;
   }
 }
 
