@@ -1,18 +1,37 @@
 header {
   background-color: $purple;
   color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  
+  @include desktop {
+    z-index: 100;
+  }
   
   ul {
     @include flexbox(flex, space-between, center, nowrap);
     flex-direction: row;
     padding: 0.5em 1em 0.15em;
     
-    .icon {
-      margin-right: 1em;
-    }
-    
     .logo {
       flex-grow: 2;
+      font-weight: $boldFont;
+      
+      @include tablet {
+        font-size: 1.4em;
+      }
+    }
+    
+    .name {
+      display: none;
+      
+      @include tablet {
+        display: inline-block;
+        margin-left: 0.5em;
+      }
     }
   }
 }
@@ -20,6 +39,102 @@ header {
 .profile-photo {
   border-radius: 50%;
   width: 3em;
-  margin-right: 1em;
+  margin-left: 1em;
 }
 
+.light {
+  font-weight: $lightFont;
+}
+
+.trademark {
+  font-size: 50%;
+  vertical-align: super;
+  font-weight: $regFont;
+}
+
+#notify {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#notifyLight {
+  background-color: $aqua;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  position: absolute;
+  top: -0.25em;
+  right: -0.25em;
+}
+
+.notify-bar {
+  padding: 0 1em;
+  background-color: #ebf5f6; //tint of $rainwashed
+  border-bottom: 1px solid $navy;
+  width: 100%;
+  position: absolute;
+  top: 3.9em;
+  right: 0;
+  
+  @include desktop {
+    width: 20%;
+    border: 1px solid $navy;
+    padding: 0 0.5em;
+  }
+  
+  .new-notification-block {
+    @include flexbox(flex, flex-start, center, wrap);
+    padding: 0.5em 0;
+    border-bottom: 1px solid $slate;
+  }
+  
+  .new-notification-block:nth-child(3n) {
+    border: none;
+  }
+}
+
+.new-notification-btn {
+  @include text($allFont, 0.85em, black, $boldFont);
+  padding: 0.5em;
+  margin-right: 0.25em;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.new-notification-action-info {
+  @include flexbox(flex, flex-start, flex-start, wrap);
+  flex-basis: 80%;
+}
+
+.new-notification-action,
+.new-notification-link,
+.no-notification {
+  @include text($allFont, 0.7em, black, $regFont);
+}
+
+.no-notification {
+  padding: 0.5em;
+  text-align: center;
+}
+
+.new-notification-link {
+  color: $navy;
+}
+
+.new-notification-action-time-info {
+  @include flexbox(flex, flex-start, flex-end, nowrap);
+  margin-top: 0.15em;
+  flex-basis: 100%;
+}
+
+.new-notification-icon {
+  width: 0.75em;
+  margin-right: 0.5em;
+}
+
+.new-notification-time {
+  @include text($allFont, 0.55em, black, $regFont);
+}
