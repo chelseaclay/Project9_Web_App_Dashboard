@@ -56,7 +56,12 @@ ul {
     font-family: "Source Sans Pro", sans-serif;
     font-size: 0.8em;
     color: black;
-    font-weight: 400; }
+    font-weight: 400;
+    transition: all 0.4s ease-in-out; }
+    .dash #search:focus {
+      outline: none;
+      border: 1px solid #3ae5e5;
+      background-color: #ebf5f6; }
 
 .traffic,
 .daily-traffic,
@@ -73,6 +78,10 @@ ul {
 .daily-traffic,
 .mobile-user {
   max-width: 100%; }
+  .traffic .canvas-parent,
+  .daily-traffic .canvas-parent,
+  .mobile-user .canvas-parent {
+    height: 15em; }
   @media (min-width: 738px) {
     .traffic,
     .daily-traffic,
@@ -81,12 +90,10 @@ ul {
       padding-right: 1em;
       padding-left: 1em; } }
 
-.traffic {
-  max-height: 15%; }
-  @media (min-width: 738px) {
-    .traffic {
-      flex-basis: 100%;
-      border-bottom: none; } }
+@media (min-width: 738px) {
+  .traffic {
+    flex-basis: 100%;
+    border-bottom: none; } }
 
 @media (min-width: 738px) {
   .daily-traffic {
@@ -217,6 +224,8 @@ header {
   height: 100%;
   background: none;
   border: none; }
+  #notify:focus {
+    outline: none; }
 
 #notifyLight {
   background-color: #3ae5e5;
@@ -477,7 +486,13 @@ header {
   width: 100%;
   padding: 1em;
   display: block;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  transition: all 0.4s ease-in-out; }
+  #search-user-field:focus,
+  #message-user-field:focus {
+    outline: none;
+    border: 1px solid #3ae5e5;
+    background-color: #ebf5f6; }
 
 #message-user-field {
   resize: vertical;
@@ -495,6 +510,10 @@ header {
   outline: none;
   border: none;
   transition: background-color 0.5s ease; }
+  .message-user button:hover {
+    background-color: #015f70; }
+  .message-user button:active {
+    background-color: #9dcdd3; }
 
 #ui-id-1 {
   font-family: "Source Sans Pro", sans-serif;
@@ -678,6 +697,10 @@ label {
   outline: none;
   border: none;
   transition: background-color 0.5s ease; }
+  .settings button:hover {
+    background-color: #015f70; }
+  .settings button:active {
+    background-color: #9dcdd3; }
   @media (min-width: 738px) {
     .settings button {
       align-self: flex-end; } }
@@ -688,6 +711,10 @@ label {
 
 .settings button[type="reset"] {
   background-color: #ad807b; }
+  .settings button[type="reset"]:hover {
+    background-color: #015f70; }
+  .settings button[type="reset"]:active {
+    background-color: #9dcdd3; }
   @media (min-width: 738px) {
     .settings button[type="reset"] {
       margin-bottom: 0; } }

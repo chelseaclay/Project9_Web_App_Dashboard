@@ -17,6 +17,13 @@
   padding: 1em;
   display: block;
   margin-bottom: 1em;
+  transition: all 0.4s ease-in-out;
+    
+    &:focus {
+      outline: none;
+      border: 1px solid $aqua;
+      background-color: #ebf5f6;
+    }
 }
 
 #message-user-field {
@@ -36,6 +43,14 @@
   outline: none;
   border: none;
   transition: background-color 0.5s ease;
+  
+  &:hover {
+    background-color: $navy;
+  }
+    
+  &:active {
+    background-color: $rainwashed;
+  }
 }
 
 #ui-id-1 {
