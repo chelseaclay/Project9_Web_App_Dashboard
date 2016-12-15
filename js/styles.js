@@ -79,6 +79,7 @@ for(var i = 0; i < notificationList.length; i++) {
   //For new notification link
   var $newNotificationLink = document.createElement("a");
   $newNotificationLink.classList.add("new-notification-link");
+  $($newNotificationLink).attr("href", "#");
   $newNotificationLink.innerHTML = notificationList[i].link;
   
   //For new notification icons
@@ -214,7 +215,6 @@ function hourlyChart() {
   };
   
   var ctx = document.getElementById("trafficChart").getContext("2d");
-  ctx.canvas.height = 100;
   var myLineChart = new Chart(ctx, {
     type: "line",
     data: data,
@@ -243,7 +243,6 @@ function dailyChart() {
   };
   
   var ctx = document.getElementById("trafficChart").getContext("2d");
-  ctx.canvas.height = 100;
   var myLineChart = new Chart(ctx, {
     type: "line",
     data: data,
@@ -272,7 +271,6 @@ function weeklyChart() {
   };
   
   var ctx = document.getElementById("trafficChart").getContext("2d");
-  ctx.canvas.height = 100;
   var myLineChart = new Chart(ctx, {
     type: "line",
     data: data,
@@ -301,7 +299,6 @@ function monthlyChart() {
   };
   
   var ctx = document.getElementById("trafficChart").getContext("2d");
-  ctx.canvas.height = 100;
   var myLineChart = new Chart(ctx, {
     type: "line",
     data: data,
@@ -366,7 +363,8 @@ window.onload = function() {
   monthlyChart();
 };
 
-
+Chart.defaults.global.responsive = true;
+Chart.defaults.global.maintainAspectRatio = false;
 
 
 // Functions for Bar Chart
@@ -473,6 +471,7 @@ for(var i = 0; i < newMembers.length; i++) {
   //For new member photos
   var $newMemberProfilePhoto = document.createElement("img");
   $newMemberProfilePhoto.classList.add("new-member-photo");
+  $($newMemberProfilePhoto).attr("alt", "Photo of " + newMembers[i].name);
   $newMemberProfilePhoto.src = "img/" + newMembers[i].photo;
   
   //For new member names
@@ -539,6 +538,7 @@ for(var i = 0; i < newActivity.length; i++) {
   //For new activity photos
   var $newActivityProfilePhoto = document.createElement("img");
   $newActivityProfilePhoto.classList.add("new-activity-photo");
+  $($newActivityProfilePhoto).attr("alt", "Photo of " + newActivity[i].name);
   $newActivityProfilePhoto.src = "img/" + newActivity[i].photo;
   
   //For new activity names
