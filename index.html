@@ -5,38 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/application.css">
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
 </head>
 <body>
   <header>
     <ul>
       <li class="logo">Your<span class="light">App</span><span class="trademark">&trade;</span></li>
       <li><button id="notify"><img src="img/icon-bell.svg" alt="Notifications" class="icon" /><span id="notifyLight"></span>
-        </button>        
+        </button>
       </li>
       <li><img src="img/me.jpg" alt="Profile Photo" class="profile-photo" /></li>
       <li class="name">Chelsea Clay</li>
     </ul>
   </header>
-    
+
   <div class="container">
-  
+
     <nav>
       <ul>
         <li class="tab-active"><a href="#" id="nav-dash"><img src="img/icon-dashboard.svg" alt="Dashboard"  class="icon"/></a></li>
-        <li><a href="#" id="nav-members"><img src="img/icon-members.svg" alt="Members"  class="icon"/></a></li>
-        <li><a href="#" id="nav-visits"><img src="img/icon-visits.svg" alt="Visits"  class="icon"/></a></li>
-        <li><a href="#" id="nav-settings"><img src="img/icon-settings.svg" alt="Settings"  class="icon"/></a></li>
+        <li><a href="#" id="nav-members"><img src="img/icon-members.svg" alt="Members link not active"  class="icon"/></a></li>
+        <li><a href="#" id="nav-visits"><img src="img/icon-visits.svg" alt="Visits link not active"  class="icon"/></a></li>
+        <li><a href="#" id="nav-settings"><img src="img/icon-settings.svg" alt="Settings link not active"  class="icon"/></a></li>
       </ul>
     </nav>
-    
+
     <div class="dash">
       <h1>Dashboard</h1>
       <div class="searchbar">
         <input type="text" id="search" name="searchbar" placeholder="Search">
       </div>
     </div>
-    
+
     <div class="traffic">
       <h2>traffic</h2>
       <ul class="traffic-charts">
@@ -49,19 +49,19 @@
         <canvas id="trafficChart"></canvas>
       </div>
     </div>
-    
+
     <div class="daily-traffic">
       <h2>daily traffic</h2>
       <div class="canvas-parent">
         <canvas id="dailyTrafficChart"></canvas>
       </div>
     </div>
-    
+
     <div class="mobile-user">
       <h2>mobile user</h2>
       <div class="canvas-parent"><canvas id="mobileUserChart"></canvas></div>
     </div>
-    
+
     <div class="social-stats">
       <h2>social stats</h2>
       <div class="twitter">
@@ -107,27 +107,27 @@
         </div>
       </div>
     </div>
-    
+
     <div class="new-members">
       <h2>new members</h2>
       <div id="profiles"></div>
     </div>
-    
+
     <div class="recent-activity">
       <h2>recent activity</h2>
       <div id="activity"></div>
     </div>
-    
+
     <div class="message-user">
       <form action="#" method="post" id="message-user-form">
         <h2>message user</h2>
         <input type="text" id="search-user-field" name="search-user" placeholder="Search for User">
         <textarea id="message-user-field" name="message-user" placeholder="Message for User"></textarea>
         <button id="message-user-btn" type="submit" value="submit">SEND</button>
-        
+
       </form>
     </div>
-    
+
     <div class="settings">
       <form action="#" method="post" id="settings-form">
         <h2>settings</h2>
@@ -138,14 +138,14 @@
           <span class="switch-handle"></span>
         </label>
 
-        
+
         <label class="settings-switch">Set Profile to Public</label>
         <label class="switch">
           <input id="profile-check" type="checkbox" class="switch-input" checked>
           <span class="switch-label" data-on="On" data-off="Off"></span>
           <span class="switch-handle"></span>
         </label>
-        
+
         <select id="timezone" name="timezone-select">
           <option value="" disabled selected>Select Timezone</option>
           <option value="-12">(GMT -12:00) Eniwetok, Kwajalein</option>
@@ -182,14 +182,14 @@
           <option value="11">(GMT +11:00) Magadan, Solomon Islands, New Caledonia</option>
           <option value="12">(GMT +12:00) Auckland, Wellington, Fiji, Kamchatka</option>
         </select>
-        
+
         <button id="settings-submit" type="submit" value="submit">SAVE</button>
         <button id="settings-cancel" type="reset" value="reset">CANCEL</button>
       </form>
     </div>
-  
-  </div>  
-  
+
+  </div>
+
   <script src="js/jquery-3.1.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>

@@ -26,11 +26,11 @@ h2 {
 .container {
   padding: 1em;
   margin-top: 55px;
-  
+
   @include tablet {
     @include flexbox(flex, space-around, flex-start, wrap);
   }
-  
+
   @include desktop {
     margin-left: 3em;
   }
@@ -46,15 +46,15 @@ ul {
 }
 
 .dash {
-  flex-basis: 100%;  
+  flex-basis: 100%;
   @include flexbox(flex, space-between, stretch, nowrap);
-  
+
   #search {
     padding: 0.4em;
     border: solid 0.5px $slate;
     @include text($allFont, 0.8em, black, $regFont);
     transition: all 0.4s ease-in-out;
-    
+
     &:focus {
       outline: none;
       border: 1px solid $aqua;
@@ -79,11 +79,11 @@ ul {
 .daily-traffic,
 .mobile-user {
   max-width: 100%;
-  
+
   .canvas-parent {
     height: 15em;
   }
-  
+
   @include tablet {
     width: 50%;
     padding-right: 1em;
@@ -92,7 +92,7 @@ ul {
 }
 
 .traffic {
-  
+
   @include tablet {
     flex-basis: 100%;
     border-bottom: none;
@@ -100,7 +100,7 @@ ul {
 }
 
 .daily-traffic {
-  
+
   @include tablet {
     border: 1px solid $slate;
     border-left: none;
@@ -108,7 +108,7 @@ ul {
 }
 
 .mobile-user {
-  
+
   @include tablet {
     margin-bottom: 1em;
     border-top: 1px solid $slate;
@@ -148,9 +148,13 @@ ul {
 
 .message-user {
   margin-bottom: 25px;
-  
+
   @include tablet {
     border-right: 1px solid $slate;
     border-bottom: none;
   }
+}
+
+.ui-helper-hidden-accessible {
+  display: none;
 }
